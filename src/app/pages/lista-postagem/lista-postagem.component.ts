@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import * as data from '../../db.json';
+import * as dados from '../../db.json';
 import { Postagem } from '../../models/post.model';
 import { Router } from '@angular/router';
 import { CartaoPostagemComponent } from '../../components/cartao-postagem/cartao-postagem.component';
@@ -18,7 +18,7 @@ export class ListaPostagemComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.posts = data.posts;
+    this.posts = dados.posts;
   }
 
   goToPost(id: string) {

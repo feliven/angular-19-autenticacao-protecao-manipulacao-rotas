@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
-import * as data from '../../db.json';
+import { ActivatedRoute, Router } from '@angular/router';
 
+import * as dados from '../../db.json';
 import { UsuarioPostagemComponent } from '../../components/usuario-postagem/usuario-postagem.component';
 import { Postagem } from '../../models/post.model';
 
@@ -13,15 +13,23 @@ import { Postagem } from '../../models/post.model';
   imports: [CommonModule, UsuarioPostagemComponent],
 })
 export class DetalhesPostagemComponent {
-  post!: Postagem;
+  id!: string | null;
+  post!: Postagem | undefined;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private rotaAtual: ActivatedRoute, private router: Router) {}
 
-  ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    const foundPost = data.posts.find((p) => p.id === id);
-    if (foundPost) {
-      this.post = foundPost;
+  ngOnInit(): void {
+    const listaPosts: Postagem[] = dados.posts;
+
+    this.id = this.rotaAtual.snapshot.paramMap.get('id');
+
+    const postEncontrado = listaPosts.find((post) => post.id === this.id);
+
+    if (postEncontrado) {
+      this.post = postEncontrado;
+    } else {
+      alert('post NÃO existe');
+      this.router.navigate(['/posts']);
     }
   }
 }
