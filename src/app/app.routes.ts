@@ -27,9 +27,9 @@ export const routes: Routes = [
       },
       {
         path: 'posts',
-        loadComponent: () =>
-          import('./pages/lista-postagem/lista-postagem.component').then(
-            (componente) => componente.ListaPostagemComponent
+        loadChildren: () =>
+          import('./pages/lista-postagem/lista-postagem.module').then(
+            (modulo) => modulo.ListaPostagemModule
           ),
       },
       {
