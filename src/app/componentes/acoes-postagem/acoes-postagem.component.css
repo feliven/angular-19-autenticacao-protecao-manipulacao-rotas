@@ -1,0 +1,8 @@
+.acoes-postagem {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  

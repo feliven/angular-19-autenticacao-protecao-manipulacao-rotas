@@ -1,0 +1,23 @@
+.post-container {
+  padding: 20px;
+  color: white;
+}
+
+.conteudo {
+  margin-left: 80px;
+}
+
+.grade-postagens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.link-postagem {
+  text-decoration: none;
+  color: inherit;
+}
+
+

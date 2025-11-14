@@ -1,0 +1,21 @@
+<div class="cartao-postagem">
+  <div class="container-imagem">
+    <img
+      [src]="postagem.imagem"
+      [alt]="postagem.titulo"
+      class="imagem-postagem"
+    />
+  </div>
+
+  <div class="conteudo-postagem">
+    <h3 class="titulo-postagem">{{ postagem.titulo }}</h3>
+    <p class="descricao-postagem">{{ postagem.descricao }}</p>
+
+    <div class="rodape-postagem">
+      <app-acoes-postagem
+        [estatisticas]="postagem.estatisticas"
+      ></app-acoes-postagem>
+      <app-usuario-postagem [usuario]="postagem.usuario"></app-usuario-postagem>
+    </div>
+  </div>
+</div>

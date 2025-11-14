@@ -1,0 +1,74 @@
+<div class="registro-container">
+  <div class="registro-box">
+    <div class="esquerda-section">
+      <img src="/images/registro.png" alt="Cyber Login" />
+    </div>
+
+    <div class="direita-section">
+      <h2 class="registro-title">Cadastro</h2>
+      <p class="registro-description">Olá! Preencha seus dados.</p>
+
+      <form
+        [formGroup]="registroForm"
+        class="registro-form"
+        (ngSubmit)="aoEnviar()"
+      >
+        <div>
+          <label>Nome</label>
+          <input
+            type="text"
+            formControlName="name"
+            placeholder="Nome completo"
+            class="registro-input"
+          />
+        </div>
+
+        <div>
+          <label>Email</label>
+          <input
+            type="email"
+            formControlName="email"
+            placeholder="Digite seu email"
+            class="registro-input"
+          />
+        </div>
+
+        <div>
+          <label>Senha</label>
+          <input
+            type="password"
+            formControlName="password"
+            placeholder="******"
+            class="registro-input"
+          />
+        </div>
+
+        <button
+          type="submit"
+          [disabled]="registroForm.invalid"
+          class="registro-button"
+        >
+          Cadastrar
+        </button>
+      </form>
+
+      <div class="social-login">
+        <p>ou entre com outras contas</p>
+        <div class="social-buttons">
+          <button class="social-btn github">
+            <img src="/images/github.png" alt="github" />
+            Github
+          </button>
+          <button class="social-btn google">
+            <img src="/images/google.png" alt="google" />
+            Gmail
+          </button>
+        </div>
+      </div>
+
+      <p class="login-link">
+        Já tem conta? <a href="/login">Faça seu login!</a>
+      </p>
+    </div>
+  </div>
+</div>

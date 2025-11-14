@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "titulo": "Interface de Login Moderna",
+      "descricao": "Uma bela interface de login com cores suaves e design clean.",
+      "imagem": "/images/post1.png",
+      "usuario": {
+        "nome": "@julio",
+        "avatar": "/images/avatar.png"
+      },
+      "estatisticas": { "codigo": 12, "compartilhamentos": 8, "comentarios": 5 }
+    },
+    {
+      "id": "2",
+      "titulo": "Painel de Administração",
+      "descricao": "Painel interativo com gráficos dinâmicos e opções avançadas.",
+      "imagem": "/images/post2.png",
+      "usuario": {
+        "nome": "@maria",
+        "avatar": "/images/avatar2.png"
+      },
+      "estatisticas": {
+        "codigo": 18,
+        "compartilhamentos": 10,
+        "comentarios": 6
+      }
+    },
+    {
+      "id": "3",
+      "titulo": "Botões e Componentes UI",
+      "descricao": "Conjunto de botões e componentes para projetos frontend modernos.",
+      "imagem": "/images/post3.png",
+      "usuario": {
+        "nome": "@carlos",
+        "avatar": "/images/avatar3.png"
+      },
+      "estatisticas": {
+        "codigo": 22,
+        "compartilhamentos": 15,
+        "comentarios": 9
+      }
+    },
+    {
+      "id": "4",
+      "titulo": "Aplicativo Mobile de E-commerce",
+      "descricao": "Um design responsivo para um aplicativo de compras online.",
+      "imagem": "/images/post4.png",
+      "usuario": {
+        "nome": "@ana",
+        "avatar": "/images/avatar4.png"
+      },
+      "estatisticas": {
+        "codigo": 30,
+        "compartilhamentos": 20,
+        "comentarios": 12
+      }
+    }
+  ]
+}
