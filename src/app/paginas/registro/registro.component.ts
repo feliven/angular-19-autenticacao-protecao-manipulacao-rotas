@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { AutenticacaoService } from '../../services/autenticacao.service';
 
 @Component({
   selector: 'app-registro',
@@ -18,7 +19,11 @@ import { Router } from '@angular/router';
 export class RegistroComponent {
   registroForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private autenticacaoService: AutenticacaoService
+  ) {
     this.registroForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -28,6 +33,7 @@ export class RegistroComponent {
 
   onSubmit() {
     if (this.registroForm.valid) {
+      this.autenticacaoService.login();
       this.router.navigate(['/posts']);
     }
   }
