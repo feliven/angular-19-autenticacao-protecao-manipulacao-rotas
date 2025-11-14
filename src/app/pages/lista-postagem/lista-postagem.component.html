@@ -1,11 +1,8 @@
 <div class="conteudo">
   <div class="grade-postagens">
-    <a
-      *ngFor="let post of posts"
-      class="link-postagem"
-      (click)="goToPost(post.id)"
-    >
-      <app-cartao-postagem [postagem]="post"></app-cartao-postagem>
-    </a>
+    @for (post of posts; track $index) {
+    <a class="link-postagem" (click)="goToPost(post.id)">
+      <app-cartao-postagem [postagem]="post"></app-cartao-postagem> </a
+    >}
   </div>
 </div>
