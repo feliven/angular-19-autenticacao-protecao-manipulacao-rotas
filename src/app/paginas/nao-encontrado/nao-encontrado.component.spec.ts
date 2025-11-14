@@ -8,9 +8,8 @@ describe('NaoEncontradoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NaoEncontradoComponent]
-    })
-    .compileComponents();
+      imports: [NaoEncontradoComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NaoEncontradoComponent);
     component = fixture.componentInstance;

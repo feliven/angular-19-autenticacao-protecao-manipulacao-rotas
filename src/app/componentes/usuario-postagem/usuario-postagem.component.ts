@@ -7,7 +7,7 @@ import { Usuario } from '../../models/post.model';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './usuario-postagem.component.html',
-  styleUrls: ['./usuario-postagem.component.css']
+  styleUrls: ['./usuario-postagem.component.css'],
 })
 export class UsuarioPostagemComponent {
   @Input() usuario!: Usuario; // 🔹 Agora 'usuario' será reconhecido no template

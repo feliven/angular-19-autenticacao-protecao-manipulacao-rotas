@@ -7,7 +7,7 @@ import { Estatisticas } from '../../models/post.model';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './acoes-postagem.component.html',
-  styleUrls: ['./acoes-postagem.component.css']
+  styleUrls: ['./acoes-postagem.component.css'],
 })
 export class AcoesPostagemComponent {
   @Input() estatisticas!: Estatisticas;
