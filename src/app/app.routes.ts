@@ -4,11 +4,6 @@ import { autenticacaoGuard } from './guards/autenticacao.guard';
 
 export const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'posts',
-    pathMatch: 'full',
-  },
-  {
     path: 'registro',
     loadComponent: () =>
       import('./pages/registro/registro.component').then(
@@ -22,8 +17,14 @@ export const routes: Routes = [
         (componente) => componente.LayoutComponent
       ),
     canActivate: [autenticacaoGuard],
+    canActivateChild: [autenticacaoGuard],
 
     children: [
+      {
+        path: '',
+        redirectTo: 'posts',
+        pathMatch: 'full',
+      },
       {
         path: 'posts',
         loadComponent: () =>
@@ -39,13 +40,13 @@ export const routes: Routes = [
             (componente) => componente.DetalhesPostagemComponent
           ),
       },
-      {
-        path: '**',
-        loadComponent: () =>
-          import('./pages/nao-encontrado/nao-encontrado.component').then(
-            (componente) => componente.NaoEncontradoComponent
-          ),
-      },
     ],
+  },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./pages/nao-encontrado/nao-encontrado.component').then(
+        (componente) => componente.NaoEncontradoComponent
+      ),
   },
 ];
