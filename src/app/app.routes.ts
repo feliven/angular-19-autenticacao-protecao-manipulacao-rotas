@@ -1,26 +1,51 @@
 import { Routes } from '@angular/router';
 
-import { RegistroComponent } from './pages/registro/registro.component';
-import { ListaPostagemComponent } from './pages/lista-postagem/lista-postagem.component';
 import { autenticacaoGuard } from './guards/autenticacao.guard';
-import { LayoutComponent } from './components/layout/layout.component';
-import { DetalhesPostagemComponent } from './pages/detalhes-postagem/detalhes-postagem.component';
 
 export const routes: Routes = [
-  { path: 'registro', component: RegistroComponent },
-  // {
-  //   path: 'posts',
-  //   canActivate: [autenticacaoGuard],
-  //   component: ListaPostagemComponent,
-  // },
   {
     path: '',
-    component: LayoutComponent,
+    redirectTo: 'posts',
+    pathMatch: 'full',
+  },
+  {
+    path: 'registro',
+    loadComponent: () =>
+      import('./pages/registro/registro.component').then(
+        (componente) => componente.RegistroComponent
+      ),
+  },
+  {
+    path: '',
+    loadComponent: () =>
+      import('./components/layout/layout.component').then(
+        (componente) => componente.LayoutComponent
+      ),
     canActivate: [autenticacaoGuard],
+
     children: [
-      { path: 'posts', component: ListaPostagemComponent },
-      { path: 'posts/:id', component: DetalhesPostagemComponent },
-      // Utilizamos dois pontos :id para indicar que é um parâmetro na URL
+      {
+        path: 'posts',
+        loadComponent: () =>
+          import('./pages/lista-postagem/lista-postagem.component').then(
+            (componente) => componente.ListaPostagemComponent
+          ),
+      },
+      {
+        // Utilizamos dois pontos :id para indicar que é um parâmetro na URL
+        path: 'posts/:id',
+        loadComponent: () =>
+          import('./pages/detalhes-postagem/detalhes-postagem.component').then(
+            (componente) => componente.DetalhesPostagemComponent
+          ),
+      },
+      {
+        path: '**',
+        loadComponent: () =>
+          import('./pages/nao-encontrado/nao-encontrado.component').then(
+            (componente) => componente.NaoEncontradoComponent
+          ),
+      },
     ],
   },
 ];
