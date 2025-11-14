@@ -6,7 +6,7 @@ import { AutenticacaoService } from '../services/autenticacao.service';
 export const autenticacaoGuard: CanActivateFn = () => {
   const autenticacaoService = inject(AutenticacaoService);
   const router = inject(Router);
-  // O inject é utilizado porque, ao manipular as classes das nossas páginas e componentes para aplicar algum método,
+  // O inject é utilizado porque, ao manipular as classes das nossas páginas e components para aplicar algum método,
   // utilizávamos o construtor para injetar dependências. Quando lidamos com funcionalidades, como no caso do AuthGuard,
   // podemos utilizar o inject para injetar essas dependências.
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-// import { RegistroComponent } from './paginas/registro/registro.component';
+// import { RegistroComponent } from './pages/registro/registro.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
-import { RegistroComponent } from './paginas/registro/registro.component';
-import { ListaPostagemComponent } from './paginas/lista-postagem/lista-postagem.component';
+import { RegistroComponent } from './pages/registro/registro.component';
+import { ListaPostagemComponent } from './pages/lista-postagem/lista-postagem.component';
 import { autenticacaoGuard } from './guards/autenticacao.guard';
 
 export const routes: Routes = [

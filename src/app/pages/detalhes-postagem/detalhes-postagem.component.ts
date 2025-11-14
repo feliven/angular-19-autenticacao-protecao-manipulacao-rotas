@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as data from '../../db.json';
-import { UsuarioPostagemComponent } from '../../componentes/usuario-postagem/usuario-postagem.component';
+import { UsuarioPostagemComponent } from '../../components/usuario-postagem/usuario-postagem.component';
 
 @Component({
   selector: 'app-detalhes-postagem',
