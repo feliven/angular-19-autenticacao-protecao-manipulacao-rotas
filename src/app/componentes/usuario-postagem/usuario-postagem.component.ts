@@ -1,14 +1,9 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Usuario } from '../../models/post.model';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-usuario-postagem',
-  standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './usuario-postagem.component.html',
-  styleUrls: ['./usuario-postagem.component.css'],
+  styleUrl: './usuario-postagem.component.css',
 })
-export class UsuarioPostagemComponent {
-  @Input() usuario!: Usuario; // 🔹 Agora 'usuario' será reconhecido no template
-}
+export class UsuarioPostagemComponent {}

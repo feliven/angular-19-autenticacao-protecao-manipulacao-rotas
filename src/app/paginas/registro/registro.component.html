@@ -8,11 +8,7 @@
       <h2 class="registro-title">Cadastro</h2>
       <p class="registro-description">Olá! Preencha seus dados.</p>
 
-      <form
-        [formGroup]="registroForm"
-        class="registro-form"
-        (ngSubmit)="aoEnviar()"
-      >
+      <form [formGroup]="registroForm" class="registro-form">
         <div>
           <label>Nome</label>
           <input
