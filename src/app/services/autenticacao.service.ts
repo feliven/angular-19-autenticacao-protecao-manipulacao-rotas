@@ -17,6 +17,6 @@ export class AutenticacaoService {
   }
 
   getStatusAutenticacao() {
-    return this.estaAutenticado;
+    return this.estaAutenticado();
   }
 }
