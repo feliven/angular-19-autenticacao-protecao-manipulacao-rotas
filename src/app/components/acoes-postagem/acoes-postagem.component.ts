@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-acoes-postagem',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './acoes-postagem.component.html',
   styleUrl: './acoes-postagem.component.css',
 })
-export class AcoesPostagemComponent {}
+export class AcoesPostagemComponent {
+  estatisticas = input<any>();
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-usuario-postagem',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './usuario-postagem.component.html',
   styleUrl: './usuario-postagem.component.css',
 })
-export class UsuarioPostagemComponent {}
+export class UsuarioPostagemComponent {
+  usuario = input<any>();
+}
