@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { autenticacaoGuard } from './guards/autenticacao.guard';
+import { postResolver } from './resolvers/post.resolver';
 
 export const routes: Routes = [
   {
@@ -39,6 +40,7 @@ export const routes: Routes = [
           import('./pages/detalhes-postagem/detalhes-postagem.component').then(
             (componente) => componente.DetalhesPostagemComponent
           ),
+        resolve: { post: postResolver },
       },
     ],
   },
