@@ -6,10 +6,10 @@ describe('RegistroComponent', () => {
   let component: RegistroComponent;
   let fixture: ComponentFixture<RegistroComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       imports: [RegistroComponent],
-    }).compileComponents();
+    });
 
     fixture = TestBed.createComponent(RegistroComponent);
     component = fixture.componentInstance;

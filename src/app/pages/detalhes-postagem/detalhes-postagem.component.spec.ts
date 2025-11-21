@@ -1,15 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetalhesPostagemComponent } from './detalhes-postagem.component';
+import { provideRouter } from '@angular/router';
 
 describe('DetalhesPostagemComponent', () => {
   let component: DetalhesPostagemComponent;
   let fixture: ComponentFixture<DetalhesPostagemComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       imports: [DetalhesPostagemComponent],
-    }).compileComponents();
+    });
 
     fixture = TestBed.createComponent(DetalhesPostagemComponent);
     component = fixture.componentInstance;

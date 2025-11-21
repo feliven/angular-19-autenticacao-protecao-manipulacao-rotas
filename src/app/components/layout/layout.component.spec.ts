@@ -6,11 +6,10 @@ describe('LayoutComponent', () => {
   let component: LayoutComponent;
   let fixture: ComponentFixture<LayoutComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [LayoutComponent]
-    })
-    .compileComponents();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [LayoutComponent],
+    });
 
     fixture = TestBed.createComponent(LayoutComponent);
     component = fixture.componentInstance;

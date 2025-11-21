@@ -6,10 +6,10 @@ describe('NaoEncontradoComponent', () => {
   let component: NaoEncontradoComponent;
   let fixture: ComponentFixture<NaoEncontradoComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       imports: [NaoEncontradoComponent],
-    }).compileComponents();
+    });
 
     fixture = TestBed.createComponent(NaoEncontradoComponent);
     component = fixture.componentInstance;

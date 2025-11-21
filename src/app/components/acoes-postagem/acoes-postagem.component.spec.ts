@@ -6,10 +6,10 @@ describe('AcoesPostagemComponent', () => {
   let component: AcoesPostagemComponent;
   let fixture: ComponentFixture<AcoesPostagemComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       imports: [AcoesPostagemComponent],
-    }).compileComponents();
+    });
 
     fixture = TestBed.createComponent(AcoesPostagemComponent);
     component = fixture.componentInstance;
