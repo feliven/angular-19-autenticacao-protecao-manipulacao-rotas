@@ -10,6 +10,7 @@ describe('DetalhesPostagemComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [DetalhesPostagemComponent],
+      providers: [provideRouter([])],
     });
 
     fixture = TestBed.createComponent(DetalhesPostagemComponent);
