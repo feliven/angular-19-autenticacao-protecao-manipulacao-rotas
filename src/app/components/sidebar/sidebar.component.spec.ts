@@ -1,4 +1,3 @@
-// TypeScript
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
@@ -11,10 +10,10 @@ describe('SidebarComponent', () => {
   let fixture: ComponentFixture<SidebarComponent>;
   let component: SidebarComponent;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [SidebarComponent, TestHostComponent],
-    }).compileComponents();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [SidebarComponent, TestHostComponent],
+    });
   });
 
   beforeEach(() => {
@@ -36,5 +35,25 @@ describe('SidebarComponent', () => {
 
   it('should not throw during change detection', () => {
     expect(() => fixture.detectChanges()).not.toThrow();
+  });
+
+  it('should initialize without errors', () => {
+    expect(component).toBeInstanceOf(SidebarComponent);
+  });
+
+  // it('should have no inputs or outputs by default', () => {
+  //   const inputs = Object.keys(component).filter((key) => key.startsWith('_'));
+  //   expect(inputs.length).toBe(0);
+  // });
+
+  it('should render within host component without errors', () => {
+    const hostFixture = TestBed.createComponent(TestHostComponent);
+    expect(() => hostFixture.detectChanges()).not.toThrow();
+  });
+
+  it('should maintain component state after multiple change detections', () => {
+    fixture.detectChanges();
+    fixture.detectChanges();
+    expect(component).toBeTruthy();
   });
 });
