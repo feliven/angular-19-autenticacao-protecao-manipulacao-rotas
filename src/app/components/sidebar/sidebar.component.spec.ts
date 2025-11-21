@@ -3,8 +3,18 @@ import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { SidebarComponent } from './sidebar.component';
 
-@Component({ template: '<app-sidebar></app-sidebar>' })
+@Component({
+  template: '<app-sidebar></app-sidebar>',
+  standalone: true,
+  imports: [SidebarComponent],
+})
 class TestHostComponent {}
+
+beforeEach(() => {
+  TestBed.configureTestingModule({
+    imports: [TestHostComponent],
+  });
+});
 
 describe('SidebarComponent', () => {
   let fixture: ComponentFixture<SidebarComponent>;
